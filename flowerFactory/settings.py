@@ -1,12 +1,8 @@
 import os
 
-from pathlib import Path
-
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
-
 SECRET_KEY = 'django-insecure-gwrm=kkaf3%e@7$+-zbm)73$=_gv!0byybv!iepc70d@30x@#q'
 
 
@@ -74,13 +70,15 @@ TEMPLATES = [
     },
 ]
 
-AUTHENTICATION_BACKENDS = [
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
+AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
-]
+)
 
 SITE_ID = 1
 
