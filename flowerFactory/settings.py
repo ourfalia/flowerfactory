@@ -5,6 +5,7 @@ from pathlib import Path
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 SECRET_KEY = 'django-insecure-gwrm=kkaf3%e@7$+-zbm)73$=_gv!0byybv!iepc70d@30x@#q'
 
