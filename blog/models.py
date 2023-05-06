@@ -6,8 +6,9 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     title = models.CharField(max_length=50)
-    content = models.TextField(max_length=500)
+    content = models.TextField(max_length=2000)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='blog/', blank=True, null=True)
     created = models.DateTimeField(default=timezone.now)
 
     class Meta:
