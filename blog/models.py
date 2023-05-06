@@ -11,8 +11,8 @@ class Post(models.Model):
     created = models.DateTimeField(default=timezone.now)
 
     class Meta:
-        verbose_name = 'post'
-        verbose_name_plural = 'posts'
+        verbose_name = 'Post'
+        verbose_name_plural = 'Posts'
 
     def __str__(self):
         return self.title
