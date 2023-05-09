@@ -1,0 +1,27 @@
+body {
+    background: none;
+    background-color: lightgray;
+}
+
+.section {
+    padding-top: 50px;
+    margin: 10px;
+}
+
+.mini-section {
+    margin-top: 500px;
+}
+
+
+@media (max-width: 991px) {
+    .section {
+        padding-top: 10px;
+    }
+    
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
+
