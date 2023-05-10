@@ -48,7 +48,7 @@
       </div>
     </header>
     <div class="section">
-      <div>
+      <div class="mini-section">
         <div class="row mb-5">
           {% for post in post_list %}
           <div class="col-md-4">
@@ -58,7 +58,7 @@
               </figure>
               <div class="media-body">
                 <h3><a href="{% url 'post_details' post.id %}" class="text-black ">{{ post }}</a></h3>
-                <p class="post-meta"><span><span class="fa fa-calendar"></span>{{ post.created }}</span></p>
+                <p class="post-meta"><span><span class="fa fa-calendar cal-space"></span>{{ post.created }}</span></p>
                 <p class="mb-4">{{ post.content }}</p>
                 <p><a href="{% url 'post_details' post.id %}" class="btn btn-black">Read More</a></p>
               </div>
@@ -66,9 +66,7 @@
           </div>
           {% endfor %}
         </div>
-
       </div>
-
     </div>
 
   </body>

@@ -9,7 +9,11 @@ body {
 }
 
 .mini-section {
-    margin-top: 500px;
+    padding-top: 30px;
+}
+
+.cal-space {
+    margin-right: 5px;
 }
 
 
@@ -21,6 +25,10 @@ body {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .mini-section {
+        padding-top: 10px;
     }
 }
 
