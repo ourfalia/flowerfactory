@@ -71,44 +71,25 @@
             <hr>
           </div>
           <div>
-            <h4 class="mb-5">Six comments</h4>
+            <h4 class="mb-5">Comments</h4>
             <ul class="comment-list">
-              <li class="comment">
-                <div class="comment-body">
-                  <h5>Ahmad</h5>
-                  <div class="meta">January 9</div>
-                  <p>Hello world this website is very good. I found the article very useful. 
-                    can you share the like for the full article and can you talk about how to plant flowers?</p>
-                </div>
-              </li>
-              <li class="comment">
-                <div class="comment-body">
-                  <h5>Ahmad</h5>
-                  <div class="meta">January 9</div>
-                  <p>Hello world</p>
-                  <p><a href="#" class="btn btn-pimary btn-black">Reply</a></p>
-                </div>
-              </li>
+              {% for comment in comments %}
+                <li class="comment">
+                  <div class="comment-body">
+                    <h5>{{comment.user}}</h5>
+                    <div class="meta">{{comment.created}}</div>
+                    <p>{{ comment.content}}</p> 
+                  </div>
+                </li>
+              {% endfor %}
             </ul>
             <hr>
             <div class="comment-for-wrap pt5">
               <h4 class="mb5">Leave a comment</h4>
-              <form action="#" class="p-5 bg-light">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="text" class="form-control" id="email">
-                </div>
-                <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
-                </div>
-                <div class="form-group">
-                  <input type="submit" value="Post Comment" class="btn btn-pimary btn-black" id="message">
-                </div>
+              <form method="post" class="p-5 bg-light">
+                {% csrf_token %}
+                {{ comment_form }}
+                <button type="submit" class="btn btn-primary btn-black">Leave a comment</button>
               </form>
             </div>
           </div>
