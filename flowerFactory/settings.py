@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'bootstrap4',
     'home',
     'products',
     'bag',
