@@ -20,16 +20,18 @@ def post_details(request, id):
     post_details = Post.objects.get(id=id)
     comments = Comment.objects.filter(post=post_details)
 
-#     # if not request.user.is_authenticated:
-#     #     return redirect(reverse('post_list'))
-
     if request.method == 'POST':
         comment_form = CommentForm(request.POST)
-        if comment_form.is_valid() & request.user.is_authenticated:
+        if not request.user.is_authenticated:
+            messages.error(request, 'Sorry, You need to log in to comment.')
+            return redirect(reverse('post_details', args=[id]))
+
+        if comment_form.is_valid():
             new_comment = comment_form.save(commit=False)
             new_comment.user = request.user
             new_comment.post = post_details
             new_comment.save()
+            return redirect(reverse('post_details', args=[id]))
     else:
         comment_form = CommentForm()
 
