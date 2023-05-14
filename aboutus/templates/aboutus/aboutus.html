@@ -80,22 +80,28 @@
           <div class="col-md-7 img-div" data-aos="fade-up">
             <img src="{{ MEDIA_URL }}about-us.jpg" alt="Image placeholder" class="img-fluid">
           </div>
+          {% for inform in aboutus %}
           <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="mb-4">{{ aboutus.title }}</h3>
-            <p>{{ aboutus.content }}</p>
+            <h3 class="mb-4">{{ inform.title }}</h3>
+            <p>{{ inform.content }}</p>
           </div>
+          {% endfor %}
         </div>
       </div>
     </div>
     <div class="section">
       <div class="container">
         <div class="row">
-          <div>
-            <p>{{ post_details.content }}</p>
-            <hr>
+          <div class="col-md-5 img-div" data-aos="fade-up">
+            <img src="{{ MEDIA_URL }}why-us.jpg" alt="Image placeholder" class="img-fluid">
           </div>
+          {% for info in why_chose_us %}
+            <div class="col-md-7" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="mb-4">{{ info.title }}</h3>
+              <p>{{ info.content }}</p>
+            </div>
+          {% endfor %}
         </div>
-        <hr>
       </div>
     </div>
   </body>
