@@ -1,0 +1,32 @@
+body {
+    background: none;
+    background-color: lightgray;
+}
+
+.container {
+    padding-top: 120px;
+}
+
+
+@media (max-width: 991px) {
+    .section {
+        padding-top: 10px;
+    }
+    
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .mini-section {
+        padding-top: 10px;
+    }
+
+    .container {
+        padding-top: 10px;
+    }
+
+    .img-div {
+        padding-bottom: 15px;
+    }
+}

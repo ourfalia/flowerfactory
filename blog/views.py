@@ -31,6 +31,7 @@ def post_details(request, id):
             new_comment.user = request.user
             new_comment.post = post_details
             new_comment.save()
+
             return redirect(reverse('post_details', args=[id]))
     else:
         comment_form = CommentForm()
