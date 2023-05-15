@@ -1,54 +1,26 @@
-# from django.shortcuts import render
-# from django.core.mail import send_mail, BadHeaderError
-# from .models import Contact
-# from .forms import ContactForm
-
-# from django.shortcuts import render, redirect, reverse
-# from django.contrib import messages
-# from .models import Post, Comment
-# from .forms import CommentForm
-# import warnings
+from django.shortcuts import render, redirect, reverse
+from django.core.mail import send_mail, BadHeaderError
+from django.contrib import messages
+from .models import Contact
+from .forms import ContactForm
 
 
-# # Create your views here.
 
+def send_email(request):
+    # send_email = Contact.objects.all()
+    contacts = Contact.objects.all()
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
+            messages.success(request, 'Thank you for contacting us.. We will get back to you soon!')   
+            return redirect(reverse('send_email'))
+    else:
+        contact_form = ContactForm()
 
-# def send_email(request):
-#     if request.method == 'POST':
-#         form = ContactForm(request.POST)
-#     else:
-#         form = ContactForm()
+    context = {
+        'contacts': contacts,
+        'contact_form': contact_form,
+    }
 
-#     context = {
-#         'form': form
-#     }
-
-#     return render(request, 'contact/contact.html', context)
-
-# def post_details(request, id):
-#     post_details = Post.objects.get(id=id)
-#     comments = Comment.objects.filter(post=post_details)
-
-#     if request.method == 'POST':
-#         comment_form = CommentForm(request.POST)
-#         if not request.user.is_authenticated:
-#             messages.error(request, 'Sorry, You need to log in to comment.')
-#             return redirect(reverse('post_details', args=[id]))
-
-#         if comment_form.is_valid():
-#             new_comment = comment_form.save(commit=False)
-#             new_comment.user = request.user
-#             new_comment.post = post_details
-#             new_comment.save()
-
-#             return redirect(reverse('post_details', args=[id]))
-#     else:
-#         comment_form = CommentForm()
-
-#     context = {
-#         'post_details': post_details,
-#         'comments': comments,
-#         'comment_form': comment_form,
-#     }
-
-#     return render(request, 'blog/post_details.html', context)
+    return render(request, 'contact/contact.html', context)

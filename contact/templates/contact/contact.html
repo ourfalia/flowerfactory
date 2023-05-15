@@ -74,6 +74,23 @@
         </div>
       </div>
     </header>
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
     <div class="section" data-aos="fade-up">
       <div class="container">
         <div class="row justify-content-center mb5">
@@ -85,7 +102,7 @@
             <div class="col-md-10 p-5 form-wrap">
                 <form method="POST" class="p-5 bg-light">
                     {% csrf_token %}
-                    {% bootstrap_form Contact_form %}
+                    {% bootstrap_form contact_form %}
                     {% buttons %}
                     <button type="submit" class="btn btn-primary btn-black">Submit</button>
                     {% endbuttons %}
@@ -97,5 +114,10 @@
         </div>
       </div>
     </div>
+    {% block postloadjs %}
+    <script type="text/javascript">
+      $('.toast').toast('show');
+    </script>
+    {% endblock %}
   </body>
 </html>
