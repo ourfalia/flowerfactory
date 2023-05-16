@@ -11,6 +11,10 @@ body {
     font-family: 'Lato';
 }
 
+.footer-space {
+    margin-top: 20px;
+}
+
 
 /* from Bulma */
 .icon {
