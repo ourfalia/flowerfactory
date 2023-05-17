@@ -1,15 +1,16 @@
 import os
 import dj_database_url
 
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
-SECRET_KEY = 'django-insecure-gwrm=kkaf3%e@7$+-zbm)73$=_gv!0byybv!iepc70d@30x@#q'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['flower-factory.herokuapp.com', 'localhost']
 
 
 INSTALLED_APPS = [
@@ -104,12 +105,19 @@ WSGI_APPLICATION = 'flowerFactory.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }  
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+
+
 
 
 
