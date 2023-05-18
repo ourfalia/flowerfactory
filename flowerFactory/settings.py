@@ -10,7 +10,7 @@ SECRET_KEY = 'f1+a(0qe$mry0d!&dppjzq)7yo18!2%zav598hvjfobr$3i@v4'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['flowerfactory.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['flower-factory.herokuapp.com', 'localhost']
 
 
 INSTALLED_APPS = [
