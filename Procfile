@@ -1,1 +1,1 @@
-web: gunicorn flower-factory.wsgi:application
+web: gunicorn flowerfactory.wsgi:application
