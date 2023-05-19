@@ -85,7 +85,8 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
+    # 'allauth.account.auth_backends.AuthenticationBackend',
+    'ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION (=False)'
 )
 
 SITE_ID = 1
