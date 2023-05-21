@@ -4,16 +4,11 @@ body {
 }
 
 .section {
-    padding-top: 120px;
-    margin: 10px;
+    padding-top: 80px;
 }
 
 .mini-section {
-    padding-top: 30px;
-}
-
-.cal-space {
-    margin-right: 5px;
+    padding-top: 120px;
 }
 
 
@@ -27,9 +22,11 @@ body {
         height: calc(100vh - 116px);
     }
 
-    .mini-section {
+    .container {
         padding-top: 10px;
     }
+
+    .img-div {
+        padding-bottom: 15px;
+    }
 }
-
-
