@@ -42,18 +42,17 @@
   </head>
   <body>
     {% block content %}
-    
-    <div class="section">
-      <div class="container mini-section">
+    <div class="section container">
+      <div class="mini-section">
         <div class="row">
           <div class="col-md-7 img-div" data-aos="fade-up">
             <img src="{{ MEDIA_URL }}about-us.jpg" alt="Image placeholder" class="img-fluid">
           </div>
           {% for inform in aboutus %}
-          <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="mb-4">{{ inform.title }}</h3>
-            <p>{{ inform.content }}</p>
-          </div>
+            <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="mb-4 text-center">{{ inform.title }}</h3>
+              <p>{{ inform.content }}</p>
+            </div>
           {% endfor %}
         </div>
       </div>
@@ -66,7 +65,7 @@
           </div>
           {% for info in why_chose_us %}
             <div class="col-md-7" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="mb-4">{{ info.title }}</h3>
+              <h3 class="mb-4 text-center">{{ info.title }}</h3>
               <p>{{ info.content }}</p>
             </div>
           {% endfor %}
