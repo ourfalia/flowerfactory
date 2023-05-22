@@ -27,7 +27,8 @@
                 <a href='{% url "products" %}?category=sympathy' class='dropdown-item'>Sympathy</a>
                 <a href='{% url "products" %}?category=birthday,thank_you,valentine,sympathy' class='dropdown-item'>All Occasions</a>
             </div>
-        </li><li class='nav-item dropdown'>
+        </li>
+        <li class='nav-item dropdown'>
             <a class='logo-font font-weight-bold nav-link text-black mr-s' href='#' id='specials-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                 Specials
             </a>
@@ -35,6 +36,16 @@
                 <a href='{% url "products" %}?category=deals' class='dropdown-item'>Deals</a>
                 <a href='{% url "products" %}?category=gifts' class='dropdown-item'>Gifts</a>
                 <a href='{% url "products" %}?category=deals, gifts' class='dropdown-item'>All Specials</a>
+            </div>
+        </li>
+        <li class='nav-item dropdown'>
+            <a class='logo-font font-weight-bold nav-link text-black mr-s' href='#' id='specials-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                Flower Factory
+            </a>
+            <div class='dropdown-menu border-0' aria-labelledby='specials-link'>
+                <a href='{% url "aboutus" %}' class='dropdown-item'>About Us</a>
+                <a href='{% url "blog" %}?c' class='dropdown-item'>Our Blog</a>
+                <a href='{% url "contact" %}' class='dropdown-item'>Contact Us</a>
             </div>
         </li>
     </ul>
