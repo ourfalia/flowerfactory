@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /profiles/
+Sitemap:  https://flower-factory.herokuapp.com/sitemap.xml
+
