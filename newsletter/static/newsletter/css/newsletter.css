@@ -1,0 +1,33 @@
+body {
+    background: none;
+    background-color: lightgray;
+}
+
+.section {
+    padding-top: 80px;
+}
+
+.mini-section {
+    padding-top: 180px;
+}
+
+
+
+@media (max-width: 991px) {
+    .section {
+        padding-top: 80px;
+    }
+    
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .container {
+        padding-top: 10px;
+    }
+
+    .img-div {
+        padding-bottom: 15px;
+    }
+}

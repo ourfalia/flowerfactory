@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.send_email, name='contact'),
+    path('', views.news_letter, name='newsletter')
 ]

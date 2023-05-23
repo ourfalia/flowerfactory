@@ -17,6 +17,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('about-us/', include('aboutus.urls')),
     path('contact/', include('contact.urls')),
+    path('newsletter/', include('newsletter.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'flowerFactory.views.handler404'

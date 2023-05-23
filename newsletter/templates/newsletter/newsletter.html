@@ -1,0 +1,82 @@
+{% extends 'base-two.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!doctype html>
+<html lang='en'>
+  <head>
+
+    {% block meta %}
+      <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+      <meta charset='utf-8'>
+      <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+      
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock%}
+
+    {% block corecss %}
+      <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>
+      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato&display=swap'>
+      <link rel="stylesheet" type="text/css" href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" >
+      <link rel='stylesheet' href='{% static "css/base.css" %}'>
+    {% endblock %}
+
+    {% block extra_css %}
+    <link rel='stylesheet' href='{% static "newsletter/css/newsletter.css" %}'>
+    {% endblock%}
+
+    {% block corejs %}
+      <script src='https://kit.fontawesome.com/396b0aad36.js' crossorigin='anonymous'></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'></script>
+      <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous'></script>
+      <!-- newsletter -->
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <!-- Stripe -->
+      <script src="https://js.stripe.com/v3/"></script>
+      {% endblock %}
+
+    {% block extra_js %}
+    {% endblock%}
+
+    <title>Blog</title>
+  </head>
+  <body>
+    {% block content %}
+    
+    <div class="section mini-section">
+      <div class="container">
+        <div class="row justify-content-center mb5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 p-5 form-wrap">
+                <form class="p-5 bg-light" action="https://herokuapp.us21.list-manage.com/subscribe/post?u=c1854dd392d1603d15b520055&amp;id=95d033d64d&amp;f_id=002e54e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <h2>Subscribe</h2>
+                        <div class="indicates-required"></div>
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email Address</label>
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                            <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                        </div>
+                        <div id="mce-responses" class="clear foot">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>   
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c1854dd392d1603d15b520055_95d033d64d" tabindex="-1" value="">
+                        </div>
+                        <div class="optionalParent">
+                            <div class="clear foot">
+                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                            </div>
+                        </div>
+                </form>
+              </div>
+            </div> 
+        </div>
+      </div>
+    </div>
+    
+    {% endblock %}
+  </body>
+</html>
