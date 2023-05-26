@@ -3,21 +3,19 @@ body {
     background-color: lightgray;
 }
 
-.section {
-    padding-top: 80px;
-}
+
 
 .mini-section {
-    padding-top: 180px;
+    padding-top: 200px;
 }
 
 
 
 @media (max-width: 991px) {
-    .section {
-        padding-top: 80px;
+    .mini-section {
+        padding-top: 150px;
     }
-    
+
 
     body {
         height: calc(100vh - 116px);

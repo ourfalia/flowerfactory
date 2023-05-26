@@ -13,10 +13,10 @@ body {
 
 
 @media (max-width: 991px) {
-    .section {
-        padding-top: 80px;
+
+    .mini-section {
+        padding-top: 100px;
     }
-    
 
     body {
         height: calc(100vh - 116px);

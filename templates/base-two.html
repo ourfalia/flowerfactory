@@ -1,300 +1,282 @@
-{% load static %} 
+{% load static %}
 
 <!doctype html>
 <html lang='en'>
-  <head>
+
+<head>
 
     {% block meta %}
-      <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-      <meta charset='utf-8'>
-      <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     {% endblock %}
 
     {% block extra_meta %}
-      <meta name="description" content="Flower Factory is the best flower shop in Ireland. 
+    <meta name="description" content="Flower Factory is the best flower shop in Ireland. 
         Delivering quality & dependability, we are the most trusted flower delivery service.">
-      <meta name="keywords" content="best flowers, flowers in dublin, free delivery, gifts,
+    <meta name="keywords" content="best flowers, flowers in dublin, free delivery, gifts,
         birthday, valentine, sympathy, roses, tulips, lily, white flowers, red roses ">
     {% endblock%}
 
     {% block corecss %}
-      <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>
-      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato&display=swap'>
-      <link rel='stylesheet' href='{% static "css/base.css" %}'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'
+        integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato&display=swap'>
+    <link rel='stylesheet' href='{% static "css/base.css" %}'>
     {% endblock %}
 
     {% block extra_css %}
     {% endblock%}
 
     {% block corejs %}
-      <script src='https://kit.fontawesome.com/396b0aad36.js' crossorigin='anonymous'></script>
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'></script>
-      <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous'></script>
-      <!-- Stripe -->
-      <script src="https://js.stripe.com/v3/"></script>
-      {% endblock %}
+    <script src='https://kit.fontawesome.com/396b0aad36.js' crossorigin='anonymous'></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'
+        integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo'
+        crossorigin='anonymous'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'
+        integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6'
+        crossorigin='anonymous'></script>
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+    {% endblock %}
 
     {% block extra_js %}
     {% endblock%}
 
     <title>Flower Factory {% block extra_title %}BEST FLOWERS IN DUBLIN{% endblock %}</title>
-  </head>
-  <body>  
+</head>
+
+<body>
     <header class='container-fluid fixed-top'>
-      <div id='topnav' class='row bg-white pt-lg-2 d-none d-lg-flex'>
-        <div class='col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-right'>
-          <a href='{% url "home" %}' class='nav-link main-logo-link'>
-            <h2 class='logo-font text-black my-0'><strong>Flower</strong>Factory</h2>
-          </a>
-        </div>
-        <div class='col-12 col-lg-4 my-auto py-1 py-lg-0'>
-          <form method='get' action='{% url "products" %}'>
-            <div class='input-group w-100'>
-              <input class='form-control border border-black rounded-0' type='text' name='q' placeholder='Search our site'>
-              <div class='input-group-append'>
-                <button class='form-control border border-black rounded-0' type='submit'>
-                  <span class='icon'>
-                    <i class='fas fa-search'></i>
-                  </span>
-                </button>
-              </div>
+        <div id='topnav' class='row bg-white pt-lg-2 d-none d-lg-flex'>
+            <div class='col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-right'>
+                <a href='{% url "home" %}' class='nav-link main-logo-link'>
+                    <h2 class='logo-font text-black my-0'><strong>Flower</strong>Factory</h2>
+                </a>
             </div>
-          </form>
+            <div class='col-12 col-lg-4 my-auto py-1 py-lg-0'>
+                <form method='get' action='{% url "products" %}'>
+                    <div class='input-group w-100'>
+                        <input class='form-control border border-black rounded-0' type='text' name='q'
+                            placeholder='Search our site'>
+                        <div class='input-group-append'>
+                            <button class='form-control border border-black rounded-0' type='submit'>
+                                <span class='icon'>
+                                    <i class='fas fa-search'></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class='col-12 col-lg-4 my-auto py-1 py-lg-0'>
+                <ul class='list-inline list-unstyled text-center text-lg-left my-0'>
+                    <li class='list-inline-item dropdown'>
+                        <a class='text-black nav-link' href='#' id='user-options' data-toggle='dropdown'
+                            aria-haspopup='true' aria-expanded='false'>
+                            <div class='text-center'>
+                                <div><i class='fas fa-user fa-lg'></i></div>
+                                <p class='my-0'>My Account</p>
+                            </div>
+                        </a>
+                        <div class='dropdown-menu border-0' aria-labelledby='user-options'>
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href='{% url "add_product" %}' class='dropdown-item'>Product Management</a>
+                            {% endif %}
+                            <a href='{% url "profile" %}' class='dropdown-item'>My Profile</a>
+                            <a href='{% url "account_logout" %}' class='dropdown-item'>Logout</a>
+                            {% else %}
+                            <a href='{% url "account_signup" %}' class='dropdown-item'>Register</a>
+                            <a href='{% url "account_login" %}' class='dropdown-item'>Login</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class='list-inline-item'>
+                        <a class='{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link'
+                            href='{% url "view_bag" %}'>
+                            <div class='text-center'>
+                                <div><i class='fas fa-shopping-bag fa-lg'></i></div>
+                                <p class='my-0'>
+                                    {% if grand_total %}
+                                    ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class='col-12 col-lg-4 my-auto py-1 py-lg-0'>
-          <ul class='list-inline list-unstyled text-center text-lg-left my-0'>
-            <li class='list-inline-item dropdown'>
-              <a class='text-black nav-link' href='#' id='user-options' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                <div class='text-center'>
-                  <div><i class='fas fa-user fa-lg'></i></div>
-                  <p class='my-0'>My Account</p>
-                </div>
-              </a>
-              <div class='dropdown-menu border-0' aria-labelledby='user-options'>
-                {% if request.user.is_authenticated %}
-                  {% if request.user.is_superuser %}
-                    <a href='{% url "add_product" %}' class='dropdown-item'>Product Management</a>
-                  {% endif %}
-                    <a href='{% url "profile" %}' class='dropdown-item'>My Profile</a>
-                    <a href='{% url "account_logout" %}' class='dropdown-item'>Logout</a>
-                {% else %}
-                  <a href='{% url "account_signup" %}' class='dropdown-item'>Register</a>
-                  <a href='{% url "account_login" %}' class='dropdown-item'>Login</a>
-                {% endif %}
-              </div>
-            </li>
-            <li class='list-inline-item'>
-              <a class='{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link' href='{% url "view_bag" %}'>
-                <div class='text-center'>
-                  <div><i class='fas fa-shopping-bag fa-lg'></i></div>
-                  <p class='my-0'>
-                    {% if grand_total %}
-                      ${{ grand_total|floatformat:2 }}
-                    {% else %}
-                      $0.00
-                    {% endif %}
-                  </p>
-                </div>
-              </a>
-            </li>
-          </ul>
+        <div class='row bg-white'>
+            <nav class='navbar navbar-expand-lg navbar-light w-100'>
+                <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#main-nav'
+                    aria-controls='main-nav' aria-expanded='false' aria-label='Toggle navigation'>
+                    <span class='navbar-toggler-icon'></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
         </div>
-      </div>
-      <div class='row bg-white'>
-        <nav class='navbar navbar-expand-lg navbar-light w-100'>
-          <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#main-nav' aria-controls='main-nav' aria-expanded='false' aria-label='Toggle navigation'>
-            <span class='navbar-toggler-icon'></span>
-          </button>
-          {% include 'includes/mobile-top-header.html' %}
-          {% include 'includes/main-nav.html' %}
-        </nav>
-      </div>
-      <div id='delivery-banner' class='row text-center'>
-        <div class='col bg-black text-white'>
-          <h4 class='logo-font my-1'>Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
-        </div>            
-      </div> 
+        <div id='delivery-banner' class='row text-center'>
+            <div class='col bg-black text-white'>
+                <h4 class='logo-font my-1'>Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
+            </div>
+        </div>
     </header>
 
     {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
-    
+
     {% block content %}
     {% endblock %}
 
-    <footer
-            class="text-center text-lg-start text-white"
-            style="background-color: #111111"
-            >
-      <!-- Grid container -->
-      <div class="container p-4 pb-0 footer-space" >
-        <!-- Section: Links -->
-        <section class="">
-          <!--Grid row-->
-          <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Flower Factory</h5>
+    <footer class="text-center text-lg-start text-white footer-space" style="background-color: #111111">
+        <!-- Grid container -->
+        <div class="container p-5 pb-0 ">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Flower Factory</h5>
 
-              <p>
-                Flower Factory is the best flower shop in Ireland. 
-                Our multi-award-winning florists in Dublin was established by Aonghus.
-                Our retail flower shop opened in 1985. Delivering quality & dependability, 
-                we are the most trusted flower delivery service. 
-                Order Birthday Flowers Today With Same & Next Day Delivery Across Ireland. 
-              </p>
-            </div>
-            <!--Grid column-->
+                        <p>
+                            Flower Factory is the best flower shop in Ireland.
+                            Our multi-award-winning florists in Dublin was established by Aonghus.
+                            Our retail flower shop opened in 1985. Delivering quality & dependability,
+                            we are the most trusted flower delivery service.
+                            Order Birthday Flowers Today With Same & Next Day Delivery Across Ireland.
+                        </p>
+                    </div>
+                    <!--Grid column-->
 
-            <!--Grid column-->
-            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Information</h5>
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Information</h5>
 
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href='{% url "aboutus" %}' class="text-white">About Us</a>
-                </li>
-                <li>
-                  <a href='{% url "blog" %}' class="text-white">Our Blog</a>
-                </li>
-                <li>
-                  <a href='{% url "contact" %}' class="text-white">Contact Us</a>
-                </li>
-                <li>
-                  <a href='{% url "newsletter" %}' class="text-white">Stay in Touch</a>
-                </li>
-              </ul>
-            </div>
-            <!--Grid column-->
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href='{% url "aboutus" %}' class="text-white">About Us</a>
+                            </li>
+                            <li>
+                                <a href='{% url "blog" %}' class="text-white">Our Blog</a>
+                            </li>
+                            <li>
+                                <a href='{% url "contact" %}' class="text-white">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href='{% url "newsletter" %}' class="text-white">Stay in Touch</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
 
-            <!--Grid column-->
-            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Occasion</h5>
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Occasion</h5>
 
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href='{% url "products" %}?category=birthday' class="text-white">Birthday</a>
-                </li>
-                <li>
-                  <a href='{% url "products" %}?category=thank_you' class="text-white">Thank you</a>
-                </li>
-                <li>
-                  <a href='{% url "products" %}?category=valentine' class="text-white">Valentine</a>
-                </li>
-                <li>
-                  <a href='{% url "products" %}?category=sympathy' class="text-white">Sympathy</a>
-                </li>
-                <li>
-                  <a href='{% url "products" %}?category=birthday,thank_you,valentine,sympathy' class="text-white">All Occasions</a>
-                </li>
-              </ul>
-            </div>
-            <!--Grid column-->
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href='{% url "products" %}?category=birthday' class="text-white">Birthday</a>
+                            </li>
+                            <li>
+                                <a href='{% url "products" %}?category=thank_you' class="text-white">Thank you</a>
+                            </li>
+                            <li>
+                                <a href='{% url "products" %}?category=valentine' class="text-white">Valentine</a>
+                            </li>
+                            <li>
+                                <a href='{% url "products" %}?category=sympathy' class="text-white">Sympathy</a>
+                            </li>
+                            <li>
+                                <a href='{% url "products" %}?category=birthday,thank_you,valentine,sympathy'
+                                    class="text-white">All Occasions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
 
-            <!--Grid column-->
-            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Specials</h5>
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Specials</h5>
 
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href='{% url "products" %}?category=deals' class="text-white">Deals</a>
-                </li>
-                <li>
-                  <a href='{% url "products" %}?category=gifts' class="text-white">Gifts</a>
-                </li>
-                <li>
-                  <a href='{% url "products" %}?category=deals, gifts' class="text-white">All Specials</a>
-                </li>
-              </ul>
-            </div>
-            <!--Grid column-->
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href='{% url "products" %}?category=deals' class="text-white">Deals</a>
+                            </li>
+                            <li>
+                                <a href='{% url "products" %}?category=gifts' class="text-white">Gifts</a>
+                            </li>
+                            <li>
+                                <a href='{% url "products" %}?category=deals, gifts' class="text-white">All Specials</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
 
-          </div>
-          <!--Grid row-->
-        </section>
-        <!-- Section: Links -->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
 
-        <hr class="mb-4" />
+            <hr class="mb-4" />
 
-        <!-- Section: Social media -->
-        <section class="mb-4 text-center">
-          <!-- Facebook -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="https://www.facebook.com/profile.php?id=100092638433287"
-            role="button"
-            target="_blank"
-            rel="noopener"
-            ><i class="fab fa-facebook-f"></i
-            ></a>
+            <!-- Section: Social media -->
+            <section class="mb-4 text-center">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="https://www.facebook.com/profile.php?id=100092638433287" role="button" target="_blank"
+                    rel="noopener"><i class="fab fa-facebook-f"></i></a>
 
-          <!-- Twitter -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="https://twitter.com/"
-            role="button"
-            target="_blank"
-            rel="noopener"
-            ><i class="fab fa-twitter"></i
-            ></a>
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/" role="button"
+                    target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
 
-          <!-- Google -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="https://www.google.com/"
-            role="button"
-            target="_blank"
-            rel="noopener"
-            ><i class="fab fa-google"></i
-            ></a>
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com/" role="button"
+                    target="_blank" rel="noopener"><i class="fab fa-google"></i></a>
 
-          <!-- Instagram -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="https://www.instagram.com/"
-            role="button"
-            target="_blank"
-            rel="noopener"
-            ><i class="fab fa-instagram"></i
-            ></a>
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"
+                    target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
 
-          <!-- Linkedin -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="https://ie.linkedin.com/"
-            role="button"
-            target="_blank"
-            rel="noopener"
-            ><i class="fab fa-linkedin-in"></i
-            ></a>
-        </section>
-        <!-- Section: Social media -->
-      </div>
-      <!-- Grid container -->
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://ie.linkedin.com/" role="button"
+                    target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
 
-    
+
     </footer>
-  
+
     {% block postloadjs %}
     <script type="text/javascript">
-      $('.toast').toast('show');
+        $('.toast').toast('show');
     </script>
     {% endblock %}
-  </body>
+</body>
+
 </html>
