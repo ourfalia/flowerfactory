@@ -4,13 +4,9 @@ body {
 }
 
 .section {
-    padding-top: 120px;
-    margin: 10px;
+    padding-top: 50px;
 }
 
-.mini-section {
-    padding-top: 60px;
-}
 
 .cal-space {
     margin-right: 5px;
@@ -19,17 +15,6 @@ body {
 
 @media (max-width: 991px) {
     .section {
-        padding-top: 80px;
-    }
-    
-
-    body {
-        height: calc(100vh - 116px);
-    }
-
-    .mini-section {
-        padding-top: 10px;
+        padding-top: 20px;
     }
 }
-
-

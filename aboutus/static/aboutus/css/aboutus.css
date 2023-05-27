@@ -7,19 +7,15 @@ body {
     padding-top: 50px;
 }
 
-.mini-section {
-    padding-top: 150px;
-}
-
 
 @media (max-width: 991px) {
 
-    .mini-section {
-        padding-top: 100px;
-    }
-
     body {
         height: calc(100vh - 116px);
+    }
+
+    .top-space {
+        padding-top: 100px;
     }
 
     .container {

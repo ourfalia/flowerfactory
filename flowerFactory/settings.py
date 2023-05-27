@@ -7,9 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
-
 DEBUG = 'DEVELOPMENT' in os.environ
-
 
 
 ALLOWED_HOSTS = ['flower-factory.herokuapp.com', 'localhost', '8000-ourfalia-flowerfactory-6rzy10c1tu.us2.codeanyapp.com']

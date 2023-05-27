@@ -1,77 +1,47 @@
-{% extends 'base-two.html' %}
+{% extends 'base.html' %}
 {% load static %}
-{% load bootstrap4 %}
 
-<!doctype html>
-<html lang='en'>
-  <head>
 
-    {% block meta %}
-      <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-      <meta charset='utf-8'>
-      <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-      
-    {% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href='{% static "aboutus/css/aboutus.css" %}'>
+{% endblock %}
 
-    {% block extra_meta %}
-    {% endblock%}
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
 
-    {% block corecss %}
-      <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>
-      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato&display=swap'>
-      <link rel='stylesheet' href='{% static "css/base.css" %}'>
-    {% endblock %}
 
-    {% block extra_css %}
-    <link rel='stylesheet' href='{% static "aboutus/css/aboutus.css" %}'>
-    {% endblock%}
-
-    {% block corejs %}
-      <script src='https://kit.fontawesome.com/396b0aad36.js' crossorigin='anonymous'></script>
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'></script>
-      <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous'></script>
-      <!-- Stripe -->
-      <script src="https://js.stripe.com/v3/"></script>
-      {% endblock %}
-
-    {% block extra_js %}
-    {% endblock%}
-
-    <title>Blog</title>
-  </head>
-  <body>
-    {% block content %}
-    <div class="section container">
-      <div class="mini-section">
-        <div class="row">
-          <div class="col-md-7 img-div" data-aos="fade-up">
+{% block content %}
+<div class="section container ">
+    <div class="row top-space">
+        <div class="col-md-7 img-div" data-aos="fade-up">
             <img src="{{ MEDIA_URL }}about-us.jpg" alt="Image placeholder" class="img-fluid">
-          </div>
-          {% for inform in aboutus %}
-            <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="mb-4 text-center">{{ inform.title }}</h3>
-              <p>{{ inform.content }}</p>
-            </div>
-          {% endfor %}
         </div>
-      </div>
+        {% for inform in aboutus %}
+        <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="mb-4 text-center">{{ inform.title }}</h3>
+            <p>{{ inform.content }}</p>
+        </div>
+        {% endfor %}
     </div>
-    <div class="section">
-      <div class="container">
+</div>
+<div class="section">
+    <div class="container">
         <div class="row">
-          <div class="col-md-5 img-div" data-aos="fade-up">
-            <img src="{{ MEDIA_URL }}why-us.jpg" alt="Image placeholder" class="img-fluid">
-          </div>
-          {% for info in why_chose_us %}
-            <div class="col-md-7" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="mb-4 text-center">{{ info.title }}</h3>
-              <p>{{ info.content }}</p>
+            <div class="col-md-5 img-div" data-aos="fade-up">
+                <img src="{{ MEDIA_URL }}why-us.jpg" alt="Image placeholder" class="img-fluid">
             </div>
-          {% endfor %}
+            {% for info in why_chose_us %}
+            <div class="col-md-7" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="mb-4 text-center">{{ info.title }}</h3>
+                <p>{{ info.content }}</p>
+            </div>
+            {% endfor %}
         </div>
-      </div>
     </div>
-    {% endblock %}
-  </body>
-</html>
+</div>
+{% endblock %}
