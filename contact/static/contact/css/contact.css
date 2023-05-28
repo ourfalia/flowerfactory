@@ -8,6 +8,10 @@ body {
     max-width: 85%;
 }
 
+.mini-section {
+    padding-top: 30px;
+}
+
 @media (max-width: 991px) {
     .section {
         padding-top: 60px;
@@ -19,8 +23,8 @@ body {
         position: relative;
     }
 
-    .container {
-        padding-top: 10px;
+    .mini-section {
+        padding-top: 50px;
     }
 
     .img-div {
