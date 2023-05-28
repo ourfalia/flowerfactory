@@ -10,7 +10,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 
-
 ALLOWED_HOSTS = ['flower-factory.herokuapp.com', 'localhost', '8000-ourfalia-flowerfactory-6rzy10c1tu.us2.codeanyapp.com']
 
 INSTALLED_APPS = [

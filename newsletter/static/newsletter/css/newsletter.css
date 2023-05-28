@@ -13,16 +13,18 @@ body {
 
 @media (max-width: 991px) {
     .mini-section {
-        padding-top: 120px;
+        padding-top: 135px;
     }
 
 
     body {
         height: calc(100vh - 116px);
+        overflow-x: hidden;
+        position: relative;
     }
 
     .container {
-        padding-top: 10px;
+        padding-top: 25px;
     }
 
     .img-div {

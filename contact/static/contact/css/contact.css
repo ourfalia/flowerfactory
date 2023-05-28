@@ -5,18 +5,18 @@ body {
 
 
 .container {
-    max-width: 90%;
-
+    max-width: 85%;
 }
 
 @media (max-width: 991px) {
     .section {
-        padding-top: 40px;
+        padding-top: 60px;
     }
-
 
     body {
         height: calc(100vh - 116px);
+        overflow-x: hidden;
+        position: relative;
     }
 
     .container {
