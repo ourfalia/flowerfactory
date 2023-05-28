@@ -25,5 +25,8 @@
    "terminal.integrated.gpuAcceleration": "canvas",
 "editor.defaultFormatter": "HookyQR.beautify",
 "python.pythonPath": "/usr/bin/python3",
-"python.formatting.provider": "black"
+"python.formatting.provider": "black",
+"[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
 }

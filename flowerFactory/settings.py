@@ -10,10 +10,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-SECRET_KEY = "wz6a36(^k4ii%3pvkh$hei5h%vxp_mm$arxdls86p9&@xm83%t"
-
-DEBUG = True
-
 
 ALLOWED_HOSTS = ['flower-factory.herokuapp.com', 'localhost', '8000-ourfalia-flowerfactory-6rzy10c1tu.us2.codeanyapp.com']
 
@@ -166,10 +162,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
     # Cache control
-    AWS_S3_OBJECT_PARAMETERS = {
-        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-        'CacheControl': 'max-age=94608000',
-    }
+    # AWS_S3_OBJECT_PARAMETERS = {
+    #     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    #     'CacheControl': 'max-age=94608000',
+    # }
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'flower-factory'
     AWS_S3_REGION_NAME = 'us-east-1'

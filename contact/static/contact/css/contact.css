@@ -8,7 +8,7 @@ body {
 }
 
 .mini-section {
-    padding-top: 150px;
+    padding-top: 50px;
 }
 
 @media (max-width: 991px) {
@@ -17,11 +17,7 @@ body {
         position: relative;
     }
 
-    .container {
-        padding-top: 0px;
-    }
-
     .mini-section {
-        padding-top: 0px;
+        padding-top: 30px;
     }
 }
