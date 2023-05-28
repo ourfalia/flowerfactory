@@ -5,9 +5,14 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 DEBUG = 'DEVELOPMENT' in os.environ
+
+SECRET_KEY = "wz6a36(^k4ii%3pvkh$hei5h%vxp_mm$arxdls86p9&@xm83%t"
+
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['flower-factory.herokuapp.com', 'localhost', '8000-ourfalia-flowerfactory-6rzy10c1tu.us2.codeanyapp.com']

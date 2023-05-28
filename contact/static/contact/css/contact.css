@@ -3,31 +3,25 @@ body {
     background-color: lightgray;
 }
 
-
 .container {
     max-width: 85%;
 }
 
 .mini-section {
-    padding-top: 30px;
+    padding-top: 150px;
 }
 
 @media (max-width: 991px) {
-    .section {
-        padding-top: 60px;
-    }
-
     body {
-        height: calc(100vh - 116px);
         overflow-x: hidden;
         position: relative;
     }
 
-    .mini-section {
-        padding-top: 50px;
+    .container {
+        padding-top: 0px;
     }
 
-    .img-div {
-        padding-bottom: 15px;
+    .mini-section {
+        padding-top: 0px;
     }
 }
