@@ -28,9 +28,11 @@ you can easily find the shop now button or search for products. The nave bar has
 - ### Design
 
   - #### Colour Scheme
+
     - The two main colours used are black and white.
-    -
+
   - #### Imagery
+
     - Imagery is important. The background image is suitable for the website. Images of all the products were uploaded to the website too.
 
 ## Features
@@ -52,6 +54,7 @@ you can easily find the shop now button or search for products. The nave bar has
 ### Frameworks, Libraries & Programs Used
 
 1. [Django==3.2](<https://en.wikipedia.org/wiki/Django_(web_framework)>)
+   - Django framework was used to speed up development of the application which was mainly built in the Python programming language.
 2. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
    - Bootstrap was used to assist with the responsiveness and styling of the website.
 3. [Hover.css:](https://ianlunn.github.io/Hover/)
@@ -67,12 +70,19 @@ you can easily find the shop now button or search for products. The nave bar has
 8. [GitHub:](https://github.com/)
    - GitHub is used to store the projects code after being pushed from Git.
 9. [Balsamiq:](https://balsamiq.com/)
-   - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
-10. [stripe](https://en.wikipedia.org/wiki/Stripe,_Inc.)
-11. [mailchimp](https://mailchimp.com/)
+
+- Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
+
+10. [Stripe](https://en.wikipedia.org/wiki/Stripe,_Inc.)
+    - Stripe was used as payment system. It is a famous platform for secure payment.
+11. [Mailchimp](https://mailchimp.com/)
+    - Mailchimp was used to send and recieve emails between clients and business owner.
 12. [Heroku](https://en.wikipedia.org/wiki/Heroku)
+    - Heroku was used to deploy this project to.
 13. [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3)
+    - AWS was used to store the static and media files.
 14. [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL)
+    - PostgreSQL was used as database for this project.
 
 ## Testing
 
@@ -84,7 +94,7 @@ you can easily find the shop now button or search for products. The nave bar has
 
 ### Known Bugs
 
-- All the functionalities look fine. However, it needs improvement in some areas. For example, The only way for the business owner to view messages coming form customers is to log into the admin site and check for messages. The same thing applies when the business owner wants to add stories in the Aboutus and Blog sections.
+- All the functionalities look fine. However, it needs improvement in some areas. For example, The only way for the business owner to view messages coming form customers is to log into the admin site and check for messages. The same thing applies when the business owner wants to add stories in the Aboutus and Blog sections. The check out page is a little scwashed horizontally on mobile view.
 
 ## Deployment
 
@@ -143,13 +153,14 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Code
 
 - [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library was used throughout the project mainly to make site responsive using the Bootstrap Grid System.
-- [Django==3.2](https://docs.djangoproject.com/en/4.2/releases/3.2/): Django Library was used throughout the project to make use of the buildin classes.
+- [Django 3.2](https://docs.djangoproject.com/en/4.2/releases/3.2/): Django Library was used throughout the project to make use of the buildin classes.
 
 ### Content
 
 - The main structure of this project is based on boutique_ado_v1 project by Code Institute (<https://github.com/Code-Institute-Solutions/boutique_ado_v1>). However, it was amended to meet the goal of the new project in addition to adding new models and functunalities.
 
 - The structure of the README.md was found [here](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md)
+- The footer was taking from [here](https://mdbootstrap.com/docs/standard/navigation/footer/examples-and-customization/) and amended slightly to fit this project.
 
 ### Media
 
