@@ -3,7 +3,7 @@
 [View the live project here.](https://flower-factory.herokuapp.com/)
 
 This website is associated with an imaginary business called Flaower Factory, a florist based in Dublin. The website is fully functioning as an E-commerce application used to enable potential customers to order products online and pay for their orders. It is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential partners. A B2C (business to customer) model was used in building this website. The business offers oline orders and delivery so it was important to give details of the products and include images to gain customers trust. The application is based on a single payment model as customers pay for single purchases they make online. Due to low budget, our marketing strategy was confined to only two types, Facebook page and email news letter. The project was also linked to social media by ceating a page on FaceBook for the business. The FaceBook page can be viewed [here]([media/facebook-page.jpg](https://www.facebook.com/profile.php?id=100092638433287))
-<h2 align="center"><img src="media/responsive.jpg"></h2>
+<h2 align="center"><img src="media/facebook-page.jpg"></h2>
 
 Cutomers can follow us on Facebook to hear our stories and posts. They can also subscribe to our news letter where they can stay in touch and recieve
 the latest offers and updates. When you visist the websit, the landing page has simple and clear structure.
